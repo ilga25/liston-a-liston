@@ -12,3 +12,7 @@ GitHub Pages desde `main`, carpeta raíz. Archivos a publicar: index.html, como-
 
 ## Límites
 Tramos sin obstáculos, ancho único, 2–300 piezas, cortes del mismo largo. La reserva se aplica a piezas; no incluye saneado de extremos. Sin comprobación de cargas o fijaciones. No se garantiza tráfico ni ingresos.
+
+
+## Integración publicitaria
+Código de AdSense instalado, mensaje europeo de Google publicado en español, con rechazo y gestión de opciones. Estado de aprobación publicitaria pendiente. Tras regenerar los archivos, ejecutar work/integrate_ads.py antes de desplegar para conservar esta integración y la privacidad actualizada.
