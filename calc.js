@@ -1,6 +1,10 @@
 (function(root){
 function layout(d){
- for(const [key,value] of Object.entries(d))if(!Number.isFinite(value)||value<0)throw Error('Revisa las medidas: introduce números válidos, sin valores negativos.');
+ for(const [key,value] of Object.entries(d)){
+  if((key==='count'&&d.mode===1)||(key==='target'&&d.mode===0))continue;
+  if(!Number.isFinite(value)||value<0)throw Error('Revisa las medidas: introduce números válidos, sin valores negativos.');
+ }
+ if(![0,1].includes(d.mode)||![0,1].includes(d.edges))throw Error('Selecciona un modo de cálculo válido.');
  if(d.width<=0||d.height<=0||d.slat<=0||d.stock<=0)throw Error('El tramo, la altura, el ancho del listón y el largo comercial deben ser positivos.');
  const useful=d.width-d.left-d.right;
  if(useful<=0)throw Error('Los márgenes ocupan todo el ancho del tramo.');
